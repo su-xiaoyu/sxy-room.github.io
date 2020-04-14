@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>实验</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+		}
+		ul.nav{
+			margin: 0;
+			list-style-type: none;
+			font-size: 25px;
+			width: 100%;
+			height: 100%;
+		    padding: 10px;
+		    vertical-align: middle;
+		    text-align: center;
+			/*border:3px solid white;/*测试用*/
+		}
+		li{
+		    display:inline-block;
+		    text-align: center;
+		}
+		li img{
+			height:25px; 
+			width:25px;
+			vertical-align: middle;
+			display: inline-block;
+		}
+		li a {
+		    display:inline;
+		    color: white;
+		    padding: 8px 16px;
+		    text-decoration: none;
+		    border-radius:30px;
+		}
+
+		li a.active {
+		    background-color: #87CEFA;
+		    color: white;
+		    border-radius:30px;
+		}
+
+		li a:hover:not(.active) {
+		    background-color: #ADD8E6;
+		    color: white;
+		    border-radius:30px;
+		}
+		/*头部区域*/
+		div.header{
+			width: 100%;
+			height: 50px;
+			margin: 0;
+			/*border:3px solid white;/*测试用*/
+		}
+		div.header p{
+			font-size: 25px;
+			text-align: center;
+			color: white;
+		}
+
+		/*上部区域*/
+		div.uppercolumn{
+			display:inline-block; 
+			color: white;
+			text-align: center;
+			width: 100%;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			/*border:3px solid white;/*测试用*/
+		
+		}
+
+		/* 图像部分 */
+		div.fakeimg {
+		  width: 100%;
+		}
+		/* 文章卡片效果 */
+		div.card {
+		  color:white;
+		  padding: 20px;
+		  margin-left: 5px;
+		  margin-right: 5px;
+		  margin-bottom: 20px;
+		  border-radius:20px;
+		  border: 0.5px solid #696969;
+		}
+
+		/*下部区域*/
+		div.lowercolumn{
+			display:inline-block; 
+			color: white;
+			text-align: center;
+			width: 100%;
+			margin-bottom: 10px;
+			border-radius:30px;
+			border: 1px solid grey;	
+		}
+		div.mycardQR{
+			float: left;
+			margin-left: 50px;
+			margin-top: 5px;
+			text-align: center;
+		}
+
+		div.mycardQR img{
+		  	border-radius:20px;
+			border:1px solid white;/*测试用*/			
+		}		
+
+		/*尾部区域*/
+		div.footer{
+			color: white;
+			width: 100%;
+			background-color: black;
+			font-size: 15px;
+			/*border:3px solid white;/*测试用*/
+		}
+		div.footer p{
+			margin-top: 0;
+			text-align: center;
+		}
+		div.footer a{
+			text-decoration: none;
+			color: white;
+		}
+		div.footer a:hover{
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body bgcolor="#15202b">
+	<div class="header">
+		<p>Hello！欢迎来到我的主页</p>
+	</div>
+	<ul class="nav">
+		<li><a href="index.html"><img src="ico/back.svg">返回</a></li>
+		<li><a href="" class="active"><img src="ico/home.svg">主页</a></li>
+		<li><a href="#footerContact"><img src="ico/contact.svg">联系</a></li>
+		<li><a href="#footerAbout"><img src="ico/about.svg">关于</a></li>
+		<li><a href="pay.html"><img src="ico/pay.svg">打赏</a></li>
+	</ul>
+	<div class="uppercolumn">
+		<div class="card">
+			<h2 align="center">Hello！欢迎来到我的主页</h2>
+            <h4 align="left" ><img src="ico/calendar.svg" width="15px" height="20px">2020年4月4日</h5>
+            <div class="fakeimg" style="height:200px;"><img src="cardpicture/qingming.jpg" height="200px"></div>
+            <p>今天是清明节</p>
+      		<p>我的第一篇写在这里的文章</p>
+   		</div>
+		<div class="card">
+			<h2 align="center">Hello！网站正在建设中……</h2>
+            <h5 align="left">xxxx年xx点xx分</h5>
+            <div class="fakeimg" style="height:200px;">图片</div>
+            <p>......</p>
+      			<p>......</p>
+   		</div>
+		<div class="card">
+			<h2 align="center">Hello！网站正在建设中……</h2>
+            <h5 align="left">xxxx年xx点xx分</h5>
+            <div class="fakeimg" style="height:200px;">图片</div>
+            <p>......</p>
+     		<p>......</p>
+   		</div>
+	</div>
+	<div class="lowercolumn">
+		<div style="width: 100%">
+			<div style="display: inline-block;">
+				<div class="mycardQR">
+					<img src="picture/qqQR.jpg" width="150px" height="150px"><br/>扫一扫，加我QQ
+				</div>
+				<div class="mycardQR">
+					<img src="picture/wechatQR.gif" width="150px" height="150px"><br/>扫一扫，加我微信
+				</div>						
+			</div>
+			<div style="border-top: 1px solid grey;width: 100%;text-align: center;">
+				<p>网站正在建设中……</p>
+				<p>网站正在建设中……</p>
+				<p>网站正在建设中……</p>
+				<p>网站正在建设中……</p>
+				<p>网站正在建设中……</p>
+				<p>网站正在建设中……</p>
+				<p>网站正在建设中……</p>
+				<p>网站正在建设中……</p>
+				<p>网站正在建设中……</p>
+			</div>					
+		</div>
+	</div>
+	<div class="footer">
+		<div>
+			<ul class="nav" style="font-size: 15px;">
+				<li><a href="pchome.html" style="font-size: 15px;text-decoration: none;"><img src="ico/pc.svg" width="15px" height="20px"> 电脑端</a></li>
+	 			<li><a href="pehome.html" style="font-size: 15px;text-decoration: none;"><img src="ico/phone.svg" width="15px" height="20px"> 手机端</a></li>
+			</ul>			
+		</div>
+		<p>
+			<a href="pehome.html" >——苏晓宇</a><br/>
+			<a id="footer">联系：QQ:2512087764</a><br/>
+			<a href="https://mail.qq.com/" target="_blank">2512087764@qq.com</a><br/>
+			<a href="https://mail.google.com/" target="_blank">su2512087764@gmail.com</a>
+		</p>
+	</div>
+</body>
+</html>

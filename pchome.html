@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>主页</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			margin-left: 50px;
+			margin-right: 50px;
+			background-color: #15202b;
+		}
+		/*导航栏*/
+		ul.nav{
+			margin: 0;
+			padding: 0;
+			width: 120px;
+		    height: 100%;
+		    overflow: hidden;
+			font-size: 25px;    
+			text-align: center;
+			list-style-type: none;
+			position: fixed;
+			vertical-align: middle;
+			/*border:1px solid white;/*测试用*/
+		}
+		.nav li{
+			float: none;
+		}
+		.nav li a {
+		    display: block;
+		    color: white;
+		    padding: 8px 16px;
+		    text-decoration: none;
+		}
+
+		.nav li a.active {
+		    background-color: #87CEFA;
+		    border-radius:50px;
+		    color: white;
+		}
+
+		.nav li a:hover:not(.active) {
+		    background-color: #ADD8E6;
+		    border-radius:50px;
+		    color: white;
+		}
+		li img{
+			height:25px; 
+			width:25px;
+			vertical-align: middle;
+			display: inline-block;
+		}
+
+		/*尾部版本切换栏*/
+		ul.footernav{
+			margin: 0;
+			list-style-type: none;
+			font-size: 25px;
+			width: 30%;
+
+		    padding: 0;
+		    overflow: hidden;
+		    text-align: center;
+			/*border:1px solid white;/*测试用*/
+		}
+		.footernav li{
+		    display:inline-block;
+		    text-align: center;
+		}
+
+		.footernav li a {
+		    display:inline;
+		    color: white;
+		    padding: 8px 16px;
+		    text-decoration: none;
+		}
+
+		.footernav li a:hover:not(.active) {
+		    background-color: #ADD8E6;
+		    color: white;
+		    border-radius:50px;
+		}
+
+		/*头部区域*/
+		div.header{
+			width: 100%;
+			/*border:1px solid white;/*测试用*/
+		}
+		div.header p{
+			font-size: 25px;
+			text-align: center;
+			color: white;
+		}	
+
+		/*左部区域*/
+		div.leftcolumn{
+			display:block; 
+			/*background-color: #35363A;*/
+			color: white;
+			text-align: center;
+			float: left;
+			margin: 10px;
+			margin-left: 130px;
+			margin-top: 0;
+			width: 900px;
+			height: 100%;
+			/*border:1px solid #696969;/*测试用*/
+		}
+		div.leftcolumn a{
+			text-decoration: none;
+			color: white;
+		}
+		div.leftcolumn a:hover{
+			text-decoration: underline;
+			color: white;
+		}
+
+		/* 图像部分 */
+		div.fakeimg {
+		  width: 100%;
+		}
+		/* 文章卡片效果 */
+		div.card {
+		  color:white;
+		  padding: 20px;
+		  margin-left: 5px;
+		  margin-right: 5px;
+		  margin-bottom: 20px;
+		  border-radius:20px;
+		  border: 0.5px solid #696969;
+		}
+		h4.cardTime:before {
+			content:'';
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			padding: 0px;
+			background: url(ico/calendar.svg);
+			background-size:cover;
+			vertical-align: middle;	
+		}
+
+		/*查看更多按钮*/
+		ul.lookmore{
+			width: 100%;
+			height: 35px;
+			font-size: 20px;
+			margin: 0;
+			padding: 0%;
+			text-align: right;
+			list-style-type: none;
+		}
+		ul.lookmore li a{
+			background-color:#15202b;
+			color: rgb(0, 0, 0);
+			text-decoration: none;
+			padding: 3px 5px;
+			border-radius: 30px;
+		}
+		ul.lookmore li a:hover{
+			background-color:  #87CEFA;
+			text-decoration: none;
+			border-radius: 30px;
+		}
+
+		/*简介区域*/
+		div.mycard{
+			display: inline-block;
+			/*background-color: #35363A;*/
+			color: white;
+			margin: 0px;
+			width: 350px;
+			margin-bottom: 10px;
+			text-align: center;
+			border-radius:30px;
+			border: 1px solid grey;
+		}
+		div.myInformation{
+			font-size: 20px;
+			border-bottom: 1px solid grey;
+			vertical-align: middle;
+		}
+		div.mycardQR{
+			float: left;
+			margin-top: 5px;
+			text-align: center;
+		}
+
+		div.mycardQR img{
+		  	border-radius:20px;
+			border:1px solid white;/*测试用*/			
+		}
+
+		/*右部区域*/
+		div.rightcolumn{
+			display:inline-block; 
+			/*background-color: #35363A;*/
+			color: white;
+			text-align: center;
+			margin: 0px;
+			margin-bottom: 10px;
+			width: 350px;
+			border-radius:30px;
+			border: 1px solid grey;
+		}
+		/* 列后面清除浮动 */
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		/*尾部区域*/
+		div.footer{
+
+			color: white;
+			background-color: black;
+			font-size: 15px;
+			/*border:1px solid white;/*测试用*/
+		}
+		div.footer p{
+			margin-top: 0;
+			text-align: center;
+		}
+		div.footer a{
+			text-decoration: none;
+			color: white;
+		}
+		div.footer a:hover{
+			text-decoration: underline;
+		}
+
+		/* 响应式布局 - 屏幕尺寸小于 1000px 时，三列布局改为上下布局 */
+		@media screen and (max-width: 1000px) {
+			ul.nav{
+				margin: 0;
+				width: 100%;	    
+			    position: static;
+			}
+			li a{
+				padding: 8px 8px;
+			}
+			li{
+				display:inline-block;
+		   		text-align: center;
+			}
+			div.leftcolumn, div.rightcolumn, div.mycard {  
+				margin: 0;
+				margin-top: 10px;
+				width: 100%;
+		    }
+		    div.leftcolumn{
+				margin: 0;
+				width: 100%;		    	
+		    }
+		  	body{
+		  		margin: 0;
+		  	}	
+		}	
+	</style>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body bgcolor="#15202b">
+	<div class="header">
+		<p>Hello！欢迎来到我的主页</p>
+	</div>
+	<ul class="nav">
+		<li><a href="index.html"><img src="ico/back.svg" alt="返回">返回</a></li>
+		<li><a href="" class="active"><img src="ico/home.svg" alt="主页">主页</a></li>
+		<li><a href="#footerContact"><img src="ico/contact.svg" alt="联系">联系</a></li>
+		<li><a href="#footerAbout"><img src="ico/about.svg" alt="关于">关于</a></li>
+		<li><a href="pay.html"><img src="ico/pay.svg" alt="打赏">打赏</a></li>
+		<li><a href="pchome.html" style="font-size: 15px;"><img src="ico/pc.svg" width="15px" height="20px" alt="电脑端"> 电脑端</a></li>
+	 	<li><a href="pehome.html" style="font-size: 15px;"><img src="ico/phone.svg" width="15px" height="20px" alt="手机端"> 手机端</a></li>
+	</ul>	
+	<div class="row">
+		<div class="leftcolumn">
+			<div class="card">
+				<h2 align="center">B站4个月300万粉丝：硬核的半佛仙人——系列视频</h2>
+				<h4 align="left" class="cardTime">2020年4月12日</h4>
+				<p style="font-size: 25px;"><a href="article/20200412.html">👉半佛老师系列视频（正在收录中）👈</a></p>
+				<ul class="lookmore">
+					<li><a href="article/20200412.html">点击这里查看更多</a></li>
+				</ul>
+   			</div>
+			<div class="card">
+				<h2 align="center">Hello！欢迎来到我的主页</h2>
+        	    <h4 align="left" class="cardTime">2020年4月4日</h4>
+				<div class="fakeimg" style="height:200px;"><img src="cardpicture/qingming.jpg" height="200px" alt="清明节的插图"></div>
+        	    <p>今天是清明节</p>
+      			<p>我的第一篇写在这里的文章</p>
+   			</div>
+			<div class="card">
+				<h2 align="center">Hello！网站正在建设中……</h2>
+        	    <h4 align="left" class="cardTime">xxxx年xx点xx分</h4>
+        	    <div class="fakeimg" style="height:200px;">图片</div>
+        	    <p>......</p>
+     			<p>......</p>
+   			</div>
+		</div>
+		<div class="mycard">
+			<div style="width: 100%">
+				<div style="display: inline-block;">
+					<div class="mycardQR" style="margin-right: 10px">
+						<img src="picture/qqQR.jpg" width="150px" height="150px" alt="QQ加好友二维码"><br/>扫一扫，加我QQ
+					</div>
+					<div class="mycardQR" style="margin-left: 10px">
+						<img src="picture/wechatQR.gif" width="150px" height="150px" alt="微信加好友二维码"><br/>扫一扫，加我微信
+					</div>						
+				</div>
+				<div style="border-top: 1px solid grey;width: 100%;text-align: center;">
+					<div class="myInformation">
+						<div>
+							<p>苏晓宇·山西</p>	
+							<div style="font-size: 15px;">
+								<p>热情的学习者&nbsp;&nbsp;入门的开发者&nbsp;&nbsp;缺钱的数码迷</p>							
+							</div>						
+						</div>
+					</div>
+					<p>网站正在建设中……</p>
+					<p>网站正在建设中……</p>
+					<p>网站正在建设中……</p>
+					<p>网站正在建设中……</p>
+					<p>网站正在建设中……</p>
+					<p>网站正在建设中……</p>
+					<p>网站正在建设中……</p>
+					<p>网站正在建设中……</p>
+				</div>					
+			</div>
+		</div>	
+		<div class="rightcolumn">
+			<p>区域2</p>
+			<p>网站正在建设中……</p>
+			<p>网站正在建设中……</p>
+			<p>网站正在建设中……</p>
+			<p>网站正在建设中……</p>
+			<p>网站正在建设中……</p>
+			<p>网站正在建设中……</p>
+			<p>网站正在建设中……</p>
+			<p>网站正在建设中……</p>
+			<p>网站正在建设中……</p>
+			<p>网站正在建设中……</p>
+			<p>网站正在建设中……</p>
+			<p>网站正在建设中……</p>
+			<p>网站正在建设中……</p>
+			<p>网站正在建设中……</p>
+			<p>网站正在建设中……</p>
+			<p>网站正在建设中……</p>
+			<p>网站正在建设中……</p>					
+		</div>
+	</div>
+		<div class="footer">
+
+			<div><p>Copyright&copy;<a href="pchome.html" id="footerAbout">——苏晓宇</a></p></div>
+			<p>
+				<a id="footerContact" style="font-size: 18px;text-decoration: none;">
+					<img src="ico/qq.svg" width="20px" height="20px" alt="QQ：">2512087764
+				</a><br/>
+				<a href="https://mail.qq.com/" target="_blank">
+					<img src="ico/mail.svg" width="20px" height="20px" alt="邮箱：">2512087764@qq.com
+				</a><br/>
+				<a href="https://mail.google.com/" target="_blank">su2512087764@gmail.com</a>
+			</p>
+	</div>	
+</body>
+</html>
